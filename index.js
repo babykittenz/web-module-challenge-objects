@@ -189,7 +189,7 @@ function getReviewByRating(array, ratingNum) {
 }
 
 
-console.log(getReviewByRating(reviews, 4));
+console.log('stretch 1', getReviewByRating(reviews, 4));
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -205,9 +205,21 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
-function getLongReviews(/* code here */) {
+function getLongReviews(array) {
     /* code here */
+    const newArray = [];
+    const counter = '';
+  for(let i = 0; i < array.length; i++){
+    const counter = array[i].feedback;
+    
+    if(counter.length >= 15){
+    newArray.push(array[i]);
+    } 
   }
+  return newArray;
+
+  }
+  console.log('stretch 2', getLongReviews(reviews));
   
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
