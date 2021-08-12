@@ -119,7 +119,7 @@ function addReview(array, name,rating,feedback){
 
 }
 
-console.log(addReview(reviews, 'test',5,'testtest'))
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -176,9 +176,20 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
- function getReviewByRating(/* code here */) {
-    /* code here */
+function getReviewByRating(array, ratingNum) {
+  /* code here */
+  const newArray = [];
+
+  for(let i = 0; i < array.length; i++){
+    if(ratingNum <= array[i].rating && (ratingNum + 1) > array[i].rating){
+    newArray.push(array[i]);
+    } 
   }
+  return newArray;
+}
+
+
+console.log(getReviewByRating(reviews, 4));
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
