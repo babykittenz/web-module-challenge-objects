@@ -208,7 +208,7 @@ Use the getLongReviews function below to do the following:
 function getLongReviews(array) {
     /* code here */
     const newArray = [];
-    const counter = '';
+    let counter = '';
   for(let i = 0; i < array.length; i++){
     const counter = array[i].feedback;
     
